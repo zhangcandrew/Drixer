@@ -1,2 +1,15 @@
 #A guy makes a vegan recipes app using firebase and blogs his struggles with getting it to work with a web app
 https://natacseanc.wordpress.com/category/veganrecipeapp/
+
+#modernizer install 
+https://github.com/Modernizr/Modernizr
+
+#On HTML5 Local Storage
+http://diveintohtml5.info/storage.html
+http://www.w3schools.com/jsref/prop_node_childnodes.asp
+http://javascript.info/tutorial/adding-script-html
+http://stackoverflow.com/questions/19667308/js-html5-displaying-local-storage
+
+#On JQuery
+http://www.w3schools.com/jquery/jquery_examples.asp
+http://www.w3schools.com/jquery/jquery_get_started.asp

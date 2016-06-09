@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="outputDiv">TODO write content</div>
+        <script src="jquery-1.12.2.min.js">
+            var output = ' ';
+            for(var key in localStorage){
+                output = output + localStorage[key] + "  ";
+            }
+            $('#outputDiv').html(output);
+        </script>
+    </body>
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js">
+</script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD0XWLarWw3afznv4REtn_-P97FY6u1T3c",
+        authDomain: "project-3833495122832284412.firebaseapp.com",
+        databaseURL: "https://project-3833495122832284412.firebaseio.com",
+        storageBucket: "project-3833495122832284412.appspot.com",
+    };
+    firebase.initializeApp(config);
+</script>
