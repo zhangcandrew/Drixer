@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--for some rason favicon.ico is having a problem on my netbeans.-->
+<html lang="en">
+    <script>
+        //fix problem with modernizr. Install on computer
+        if (Modernizr.localstorage) {
+            // window.localStorage is available!
+            var drinksElement = Document.getElementByID("drinks");
+            var count = drinksElement.childNodes.length;
+            
+            for(var i = 0; i<drinksElement.length; i++){
+                localStorage.setItem("box"+i, drinksElement[i].text);
+            }
+        } else {
+            // no native support for HTML5 storage :(
+        }
+    </script>
+
+    <head>
+        <link rel="shortcut icon" href="">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>Drixer</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="../site.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Drixer</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Nav header</li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="./">Home<span class="sr-only">(current)</span></a></li>
+                            <li><a href="../navbar-static-top/">Browse</a></li>
+                            <li><a href="../navbar-fixed-top/">Settings</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </nav>
+
+            <!-- Main Body -->
+            <div class="jumbotron col-lg-12 text-center">
+                <h1>The Drink Mixer!</h1>
+
+                <!-- Drinks Input -->
+                <div class="col-lg-6">
+                    <h2>Drinks<span class="label label-default"></span></h2>
+                    <form id="drinks" class="form" role="inputs">
+                        <div class="input-group-lg col-xs-12">
+                            <input type="text" class="form-control form-drinks" placeholder="Alcohol">
+                        </div>
+                        <div class="input-group-lg col-xs-12">
+                            <input type="text" class="form-control form-drinks" placeholder="Alcohol">
+                        </div>
+                        <div class="input-group-lg col-xs-12">
+                            <input type="text" class="form-control form-drinks" placeholder="Alcohol">
+                        </div>
+                        <button type="expand" class="btn btn-default">Add more...</button>
+                    </form>
+                </div>
+
+                <!-- Volumes Input -->
+                <div class="col-lg-6">
+                    <form class="form" role="volumes">
+                        <h2>Volumes<span class="label label-dafult v-label"></span></h2>
+                        <div class="input-group input-group-lg col-xs-6 col-md-offset-3">
+                            <input type="text" class="form-control form-volumes" placeholder="Volume">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">Units...<span class="caret"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>L</li>
+                                    <li>fl. oz.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="input-group input-group-lg col-xs-6 col-md-offset-3">
+                            <input type="text" class="form-control form-volumes" placeholder="Volume">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">Units...<span class="caret"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>L</li>
+                                    <li>fl. oz.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="input-group input-group-lg col-xs-6 col-md-offset-3">
+                            <input type="text" class="form-control form-volumes" placeholder="Volume">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">Units...<span class="caret"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>L</li>
+                                    <li>fl. oz.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <p>
+            <div class="text-center">
+                <a class="btn btn-lg btn-primary mix-button" href="Results.html" role="button">Mix! &raquo;</a>
+            </div>
+        </p>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
