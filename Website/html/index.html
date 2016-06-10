@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <!--for some rason favicon.ico is having a problem on my netbeans.-->
-<html lang="en">
-    <script>
-        //fix problem with modernizr. Install on computer
-        if (Modernizr.localstorage) {
-            // window.localStorage is available!
-            var drinksElement = Document.getElementByID("drinks");
-            var count = drinksElement.childNodes.length;
-            
-            for(var i = 0; i<drinksElement.length; i++){
-                localStorage.setItem("box"+i, drinksElement[i].text);
-            }
-        } else {
-            // no native support for HTML5 storage :(
-        }
-    </script>
+<html lang="en" class = "no-js">
+    <!-- saved locally for now change late -->
 
     <head>
         <link rel="shortcut icon" href="">
@@ -35,7 +22,7 @@
         <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="../site.css" rel="stylesheet">
+        <link href="../css/site.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -159,10 +146,28 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!--Problem with this area. Need a check for when the browser is IE 10, otherewise don't use. 
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>    
+    -->
+    
+    <script src="../../Website/json/modernizr.js">
+        //fix problem with modernizr. For some reason, it is blocking the html page after it has loaded
+        //might have to do with script overriding page view. 
+        if (Modernizr.localstorage) {
+            // window.localStorage is available!
+            var drinksElement = Document.getElementByID("drinks");
+            var count = drinksElement.childNodes.length;
+
+            for (var i = 0; i < drinksElement.length; i++) {
+                localStorage.setItem("box" + i, drinksElement[i].text);
+            }
+        } else {
+            // no native support for HTML5 storage :(   
+        }
+    </script>
 </body>
 </html>
