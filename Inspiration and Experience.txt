@@ -1,5 +1,9 @@
-#A guy makes a vegan recipes app using firebase and blogs his struggles with getting it to work with a web app
+#help with recipes and mixed drinks
 https://natacseanc.wordpress.com/category/veganrecipeapp/
+http://www.1001cocktails.com/recipes/most-popular-mixed-drinks.html
+
+#On Modernizr
+http://webdesignernotebook.com/css/how-to-use-modernizr/
 
 #modernizer install 
 https://github.com/Modernizr/Modernizr

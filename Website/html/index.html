@@ -153,20 +153,11 @@
     <!--Problem with this area. Need a check for when the browser is IE 10, otherewise don't use. 
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>    
     -->
+    
     <script src="../../Website/json/modernizr.js">
-        //fix problem with modernizr. Install on computer
-        Modernizr.addTest('localstorage', function () {
-            var mod = 'modernizr';
-            try {
-                localStorage.setItem(mod, mod);
-                localStorage.removeItem(mod);
-                return true;
-            } catch (e) {
-                return false;
-            }
-        });
-
-        if (localstorage) {
+        //fix problem with modernizr. For some reason, it is blocking the html page after it has loaded
+        //might have to do with script overriding page view. 
+        if (Modernizr.localstorage) {
             // window.localStorage is available!
             var drinksElement = Document.getElementByID("drinks");
             var count = drinksElement.childNodes.length;
