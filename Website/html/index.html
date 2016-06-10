@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <!--for some rason favicon.ico is having a problem on my netbeans.-->
-<html lang="en">
+<html lang="en" class = "no-js">
     <!-- saved locally for now change late -->
-    <script src="../../Website/json/modernizr.js">
-        //fix problem with modernizr. Install on computer
-        if (Modernizr.localstorage) {
-            // window.localStorage is available!
-            var drinksElement = Document.getElementByID("drinks");
-            var count = drinksElement.childNodes.length;
-            
-            for(var i = 0; i<drinksElement.length; i++){
-                localStorage.setItem("box"+i, drinksElement[i].text);
-            }
-        } else {
-            // no native support for HTML5 storage :(
-        }
-    </script>
 
     <head>
         <link rel="shortcut icon" href="">
@@ -165,7 +151,32 @@
     <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--Problem with this area. Need a check for when the browser is IE 10, otherewise don't use. 
-    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>    
     -->
+    <script src="../../Website/json/modernizr.js">
+        //fix problem with modernizr. Install on computer
+        Modernizr.addTest('localstorage', function () {
+            var mod = 'modernizr';
+            try {
+                localStorage.setItem(mod, mod);
+                localStorage.removeItem(mod);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        });
+
+        if (localstorage) {
+            // window.localStorage is available!
+            var drinksElement = Document.getElementByID("drinks");
+            var count = drinksElement.childNodes.length;
+
+            for (var i = 0; i < drinksElement.length; i++) {
+                localStorage.setItem("box" + i, drinksElement[i].text);
+            }
+        } else {
+            // no native support for HTML5 storage :(   
+        }
+    </script>
 </body>
 </html>
