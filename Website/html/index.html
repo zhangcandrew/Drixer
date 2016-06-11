@@ -4,14 +4,14 @@
     <!-- saved locally for now change late -->
 
     <head>
-        <link rel="shortcut icon" href="">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="../../favicon.ico">
+        <link rel="icon" href="../favicon.ico">
+        <link rel="shortcut icon" href="">
 
         <title>Drixer</title>
 
@@ -65,7 +65,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="active"><a href="./">Home<span class="sr-only">(current)</span></a></li>
                             <li><a href="../navbar-static-top/">Browse</a></li>
-                            <li><a href="../navbar-fixed-top/">Settings</a></li>
+                            <li><a href="../navbar-fixed-top/">Results</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div><!--/.container-fluid -->
@@ -94,7 +94,7 @@
 
                 <!-- Volumes Input -->
                 <div class="col-lg-6">
-                    <form class="form" role="volumes">
+                    <form id="volumes" class="form" role="volumes">
                         <h2>Volumes<span class="label label-dafult v-label"></span></h2>
                         <div class="input-group input-group-lg col-xs-6 col-md-offset-3">
                             <input type="text" class="form-control form-volumes" placeholder="Volume">
@@ -150,13 +150,13 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!--Problem with this area. Need a check for when the browser is IE 10, otherewise don't use. 
-    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>    
+    <!--Problem with this area. Need a check for when the browser is IE 10, otherewise don't use.
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
     -->
-    
+
     <script src="../../Website/json/modernizr.js">
         //fix problem with modernizr. For some reason, it is blocking the html page after it has loaded
-        //might have to do with script overriding page view. 
+        //might have to do with script overriding page view.
         if (Modernizr.localstorage) {
             // window.localStorage is available!
             var drinksElement = Document.getElementByID("drinks");
@@ -166,7 +166,7 @@
                 localStorage.setItem("box" + i, drinksElement[i].text);
             }
         } else {
-            // no native support for HTML5 storage :(   
+            // no native support for HTML5 storage :(
         }
     </script>
 </body>
