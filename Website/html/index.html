@@ -151,7 +151,6 @@
                 if (Modernizr.localstorage) {
                     // window.localStorage is available!
                     var drinksElement = document.getElementById("drinks");
-                    var count = drinksElement.childNodes.length;
 
                     for (var i = 0; i < drinksElement.length - 1; i++) {
                         localStorage.setItem("box" + i, drinksElement[i].text);

@@ -73,7 +73,7 @@ and open the template in the editor.
           </div><!--/.container-fluid -->
       </nav>
       <div id="outputDiv">TODO write content</div>
-      <script src="jquery-1.12.2.min.js">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
           var output = ' ';
           for(var key in localStorage){
               output = output + localStorage[key] + "  ";
@@ -111,7 +111,7 @@ and open the template in the editor.
   <!--
   use frequently to test for local storage. 
   console.log("local storage");
-for (i = 0; i < localStorage.length; i++)   {
-    console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
-}
+    for(var key in localStorage){
+              console.log(key + "=[" + localStorage[key] + "]");
+    }
   -->
