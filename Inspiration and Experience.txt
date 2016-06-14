@@ -17,3 +17,6 @@ http://stackoverflow.com/questions/19667308/js-html5-displaying-local-storage
 #On JQuery
 http://www.w3schools.com/jquery/jquery_examples.asp
 http://www.w3schools.com/jquery/jquery_get_started.asp
+
+#on testing Javascript Console
+http://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables
