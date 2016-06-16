@@ -87,7 +87,7 @@
                         <div class="input-group-lg col-xs-12">
                             <input type="text" class="form-control form-drinks" placeholder="Alcohol">
                         </div>
-                        <button type="expand" class="btn btn-default">Add more...</button>
+                        <button type="expand" class="btn btn-default" onclick = "store()">Add more...</button>
                     </form>
                 </div>
 
@@ -151,8 +151,9 @@
                 if (Modernizr.localstorage) {
                     // window.localStorage is available!
                     var drinksElement = document.getElementById("drinks");
-                    console.log(drinksElement[i].text);
+                    
                     for (var i = 0; i < drinksElement.length - 1; i++) {
+                        console.log(drinksElement[i].text);
                         localStorage.setItem("box" + i, drinksElement[i].text);
                     }
                 } else {
