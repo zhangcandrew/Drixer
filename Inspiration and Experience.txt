@@ -13,6 +13,7 @@ http://diveintohtml5.info/storage.html
 http://www.w3schools.com/jsref/prop_node_childnodes.asp
 http://javascript.info/tutorial/adding-script-html
 http://stackoverflow.com/questions/19667308/js-html5-displaying-local-storage
+http://www.thomashardy.me.uk/using-html5-localstorage-on-a-form
 
 #On JQuery
 http://www.w3schools.com/jquery/jquery_examples.asp
