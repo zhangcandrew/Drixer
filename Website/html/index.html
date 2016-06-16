@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--for some reason favicon.ico is having a problem on my netbeans.-->
+
 <html lang="en" class = "no-js">
     <!-- saved locally for now change late -->
 
@@ -16,10 +16,10 @@
         <title>Drixer</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../../bootstrap/docs/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
 
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <link href="../../bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
         <link href="../css/site.css" rel="stylesheet">
@@ -151,7 +151,7 @@
                 if (Modernizr.localstorage) {
                     // window.localStorage is available!
                     var drinksElement = document.getElementById("drinks");
-                    
+
                     for (var i = 0; i < drinksElement.length - 1; i++) {
                         console.log(drinksElement[i].text);
                         localStorage.setItem("box" + i, drinksElement[i].text);
@@ -165,15 +165,15 @@
             }
         }
     </script>
-    
-    
+
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">console.log("here");</script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../bootstrap/docs/dist/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
