@@ -143,8 +143,6 @@
 
 
     <script type="text/javascript" src="../../Website/json/modernizr.js">
-        //fix problem with modernizr. For some reason, it is blocking the html page after it has loaded
-        //might have to do with script overriding page view.
 
         void function store() {
             try {
@@ -153,7 +151,7 @@
                     var drinksElement = document.getElementById("drinks");
 
                     for (var i = 0; i < drinksElement.length - 1; i++) {
-                        console.log(drinksElement[i].text);
+                        console.log("box" + i + ", " + drinksElement[i].value);
                         localStorage.setItem("box" + i, drinksElement[i].text);
                     }
                 } else {
