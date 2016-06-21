@@ -14,6 +14,7 @@ http://www.w3schools.com/jsref/prop_node_childnodes.asp
 http://javascript.info/tutorial/adding-script-html
 http://stackoverflow.com/questions/19667308/js-html5-displaying-local-storage
 http://www.thomashardy.me.uk/using-html5-localstorage-on-a-form
+http://www.w3schools.com/html/html5_webstorage.asp
 
 #On JQuery
 http://www.w3schools.com/jquery/jquery_examples.asp
@@ -21,3 +22,4 @@ http://www.w3schools.com/jquery/jquery_get_started.asp
 
 #on testing Javascript Console
 http://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables
+http://www.w3schools.com/jsref/met_doc_write.asp
