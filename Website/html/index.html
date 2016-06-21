@@ -152,7 +152,7 @@
 
                     for (var i = 0; i < drinksElement.length - 1; i++) {
                         console.log("box" + i + ", " + drinksElement[i].value);
-                        localStorage.setItem("box" + i, drinksElement[i].text);
+                        localStorage.setItem("box" + i, drinksElement[i].value);
                     }
                 } else {
                     // no native support for HTML5 storage :(
