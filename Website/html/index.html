@@ -150,7 +150,7 @@
                     // window.localStorage is available!
                     var drinksElement = document.getElementById("drinks");
 
-                    for (var i = 0; i < drinksElement.length - 1; i++) {
+                    for (var i = 0; i < drinksElement.length; i++) {
                         console.log("box" + i + ", " + drinksElement[i].value);
                         localStorage.setItem("box" + i, drinksElement[i].value);
                     }

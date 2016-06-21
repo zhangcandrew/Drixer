@@ -72,7 +72,7 @@
           for(var key in localStorage){
               output = output + localStorage[key] + "  ";
           }
-          $('#outputDiv').html(output);
+          document.write(output);
       </script>
 
 
@@ -106,8 +106,8 @@
 
   <!--
   use frequently to test for local storage.
-  console.log("local storage");
-    for(var key in localStorage){
-              console.log(key + "=[" + localStorage[key] + "]");
-    }
+    console.log("local storage");
+      for(var key in localStorage){
+                console.log(key + "=[" + localStorage[key] + "]");
+      }
   -->
