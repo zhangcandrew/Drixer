@@ -23,3 +23,6 @@ http://www.w3schools.com/jquery/jquery_get_started.asp
 #on testing Javascript Console
 http://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables
 http://www.w3schools.com/jsref/met_doc_write.asp
+
+#posted stackoverflow question
+http://stackoverflow.com/questions/37958235/javascript-function-not-being-recognized-for-call-to-save-data-in-local-storage
