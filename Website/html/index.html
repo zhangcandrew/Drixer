@@ -29,24 +29,6 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
-        <script type="text/javascript" src="../../Website/json/modernizr.js">
-            function store() {
-                if (Modernizr.localstorage) {
-                    // window.localStorage is available!
-                    var drinksElement = document.getElementById("drinks");
-
-                    for (var i = 0; i < drinksElement.length; i++) {
-                        console.log("box" + i + ", " + drinksElement[i].value);
-                        localStorage.setItem("box" + i, drinksElement[i].value);
-                    }
-                } else {
-                    // no native support for HTML5 storage :(
-                }
-            }
-
-            document.getElementById("btnsave").addEventListener("click", store);
-        </script>
     </head>
 
     <body>
@@ -152,10 +134,10 @@
 
             <!-- Submit Button -->
             <p>
-            <div class="text-center">
-                <a class="btn btn-lg btn-primary mix-button" href="Results.html" role="button" id = "btnsave">Mix! &raquo;</a>
-            </div>
-        </p>
+                <div class="text-center">
+                    <a class="btn btn-lg btn-primary mix-button" href="Results.html" role="button">Mix! &raquo;</a>
+                </div>
+            </p>
 
     </div> <!-- /container -->
     <!-- Bootstrap core JavaScript
@@ -166,5 +148,24 @@
     <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    
+    <script src="../../Website/json/modernizr.js" >
+        document.getElementById("btnsave").addEventListener("click", store, false);
+        
+        function store() {
+            if (Modernizr.localstorage) {
+                // window.localStorage is available!
+                var drinksElement = document.getElementById("drinks");
+
+                for (var i = 0; i < drinksElement.length; i++) {
+                    console.log("box" + i + ", " + drinksElement[i].value);
+                    localStorage.setItem("box" + i, drinksElement[i].value);
+                }
+            } else {
+                // no native support for HTML5 storage :(
+            }
+        }
+    </script>
+        
 </body>
 </html>
