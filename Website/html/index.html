@@ -140,6 +140,25 @@
             </p>
 
     </div> <!-- /container -->
+    
+    <script src="../../Website/json/modernizr.js" >
+            var button = document.getElementById("btnsave");
+                
+            button.addEventListener("click", function(){
+                if (Modernizr.localstorage) {
+                // window.localStorage is available!
+                    var drinksElement = document.getElementById("drinks");
+
+                    for (var i = 0; i < drinksElement.length-1; i++) {
+                        localStorage["box" + i] = drinksElement[i].value;
+                    }
+                } else {
+                    // no native support for HTML5 storage :(
+                }
+            });
+        
+        
+    </script>     
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -148,24 +167,5 @@
     <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
-    
-    <script src="../../Website/json/modernizr.js" >
-        document.getElementById("btnsave").addEventListener("click", store, false);
-        
-        function store() {
-            if (Modernizr.localstorage) {
-                // window.localStorage is available!
-                var drinksElement = document.getElementById("drinks");
-
-                for (var i = 0; i < drinksElement.length; i++) {
-                    console.log("box" + i + ", " + drinksElement[i].value);
-                    localStorage.setItem("box" + i, drinksElement[i].value);
-                }
-            } else {
-                // no native support for HTML5 storage :(
-            }
-        }
-    </script>
-        
 </body>
 </html>
