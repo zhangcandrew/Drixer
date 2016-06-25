@@ -141,24 +141,26 @@
 
     </div> <!-- /container -->
     
-    <script src="../../Website/json/modernizr.js" >
-            var button = document.getElementById("btnsave");
-                
-            button.addEventListener("click", function(){
-                if (Modernizr.localstorage) {
-                // window.localStorage is available!
-                    var drinksElement = document.getElementById("drinks");
+    <script src="../../Website/json/modernizr.js" ></script> 
+    <script> 
+        var button = document.getElementById("btnsave");
+        var shamt = 0;
+        button.addEventListener("click", function(){
+            if (Modernizr.localstorage) {
+            // window.localStorage is available!
+                var drinksElement = document.getElementById("drinks");
 
-                    for (var i = 0; i < drinksElement.length-1; i++) {
-                        localStorage["box" + i] = drinksElement[i].value;
-                    }
-                } else {
-                    // no native support for HTML5 storage :(
+                for (var i = 0; i < drinksElement.length-1; i++) {
+                    localStorage["box" + (i+shamt)] = drinksElement[i].value;
                 }
-            });
-        
-        
-    </script>     
+                shamt+=3;
+                console.log(shamt);
+            } else {
+                // no native support for HTML5 storage :(
+            }
+            
+        });        
+    </script>    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
