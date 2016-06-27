@@ -143,23 +143,22 @@
     
     <script src="../../Website/json/modernizr.js" ></script> 
     <script> 
-        var button = document.getElementById("btnsave");
-        var shamt = 0;
-        button.addEventListener("click", function(){
+        function store(){
             if (Modernizr.localstorage) {
             // window.localStorage is available!
                 var drinksElement = document.getElementById("drinks");
-
                 for (var i = 0; i < drinksElement.length-1; i++) {
-                    localStorage["box" + (i+shamt)] = drinksElement[i].value;
+                    localStorage["box" + (i + shamt)] = drinksElement[i].value;
+                    shamt++;
                 }
-                shamt+=3;
-                console.log(shamt);
-            } else {
-                // no native support for HTML5 storage :(
+            } else {   // no native support for HTML5 storage :(
             }
-            
-        });        
+        }
+        
+        var button = document.getElementById("btnsave");
+        var shamt = 0;
+        button.addEventListener("click", store);
+        
     </script>    
     <!-- Bootstrap core JavaScript
     ================================================== -->
