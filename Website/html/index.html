@@ -142,21 +142,20 @@
     </div> <!-- /container -->
     
     <script src="../../Website/json/modernizr.js" ></script> 
-    <script> 
+    <script>
+        var shamt = 0;
         function store(){
             if (Modernizr.localstorage) {
             // window.localStorage is available!
+                shamt +=3;
                 var drinksElement = document.getElementById("drinks");
                 for (var i = 0; i < drinksElement.length-1; i++) {
                     localStorage["box" + (i + shamt)] = drinksElement[i].value;
-                    shamt++;
                 }
             } else {   // no native support for HTML5 storage :(
             }
         }
-        
         var button = document.getElementById("btnsave");
-        var shamt = 0;
         button.addEventListener("click", store);
         
     </script>    
