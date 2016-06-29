@@ -134,22 +134,20 @@
 
             <!-- Submit Button -->
             <p>
-                <div class="text-center">
-                    <a class="btn btn-lg btn-primary mix-button" href="Results.html" role="button">Mix! &raquo;</a>
-                </div>
-            </p>
+            <div class="text-center">
+                <a class="btn btn-lg btn-primary mix-button" href="Results.html" role="button">Mix! &raquo;</a>
+            </div>
+        </p>
 
     </div> <!-- /container -->
-    
-    <script src="../../Website/json/modernizr.js" ></script> 
-    <script>
+    <script type="text/javascript">
         var shamt = 0;
-        function store(){
+        function store() {
+            shamt +=3;
             if (Modernizr.localstorage) {
-            // window.localStorage is available!
-                shamt +=3;
+                // window.localStorage is available!
                 var drinksElement = document.getElementById("drinks");
-                for (var i = 0; i < drinksElement.length-1; i++) {
+                for (var i = 0; i < drinksElement.length - 1; i++) {
                     localStorage["box" + (i + shamt)] = drinksElement[i].value;
                 }
             } else {   // no native support for HTML5 storage :(
@@ -157,8 +155,9 @@
         }
         var button = document.getElementById("btnsave");
         button.addEventListener("click", store);
-        
-    </script>    
+    </script>
+
+    <script src="../../Website/json/modernizr.js" ></script> 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

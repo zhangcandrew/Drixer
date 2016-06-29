@@ -5,7 +5,9 @@ http://www.1001cocktails.com/recipes/most-popular-mixed-drinks.html
 #On Javascript hoisting and nuances
 http://www.standardista.com/javascript/15-common-javascript-gotchas/
 http://stackoverflow.com/questions/23667086/why-is-my-variable-unaltered-after-i-modify-it-inside-of-a-function-asynchron
-
+https://gist.github.com/hallettj/64478
+https://www.kirupa.com/html5/variable_scope_js.htm
+https://msdn.microsoft.com/library/bzt2dkta(v=vs.94).aspx
 
 #On Modernizr
 http://webdesignernotebook.com/css/how-to-use-modernizr/
