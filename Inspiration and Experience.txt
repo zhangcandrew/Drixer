@@ -8,6 +8,7 @@ http://stackoverflow.com/questions/23667086/why-is-my-variable-unaltered-after-i
 https://gist.github.com/hallettj/64478
 https://www.kirupa.com/html5/variable_scope_js.htm
 https://msdn.microsoft.com/library/bzt2dkta(v=vs.94).aspx
+http://stackoverflow.com/questions/1878264/how-do-i-make-an-html-button-not-reload-the-page
 
 #On Modernizr
 http://webdesignernotebook.com/css/how-to-use-modernizr/
@@ -30,6 +31,7 @@ http://www.w3schools.com/jquery/jquery_get_started.asp
 #on testing Javascript Console
 http://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables
 http://www.w3schools.com/jsref/met_doc_write.asp
+http://stackoverflow.com/questions/14659098/checking-if-a-textbox-is-empty-in-javascript
 
 #posted stackoverflow question
 http://stackoverflow.com/questions/37958235/javascript-function-not-being-recognized-for-call-to-save-data-in-local-storage
