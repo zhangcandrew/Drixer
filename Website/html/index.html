@@ -87,7 +87,7 @@
                         <div class="input-group-lg col-xs-12">
                             <input type="text" class="form-control form-drinks" placeholder="Alcohol">
                         </div>
-                        <button type="expand" class="btn btn-default" id = "btnsave">Add more...</button>
+                        <button type="button" class="btn btn-default" id = "btnsave">Add more...</button>
                     </form>
                 </div>
 
@@ -142,19 +142,33 @@
     </div> <!-- /container -->
     <script type="text/javascript">
         var shamt = 0;
+        var temp = 0;
         function store() {
-            shamt +=3;
             if (Modernizr.localstorage) {
                 // window.localStorage is available!
                 var drinksElement = document.getElementById("drinks");
-                for (var i = 0; i < drinksElement.length - 1; i++) {
-                    localStorage["box" + (i + shamt)] = drinksElement[i].value;
+                if (drinksElement[0].value!="" || drinksElement[1].value != "" || drinksElement[2].value != "") {
+                    for (var i = 0; i < drinksElement.length - 1; i++) {
+                        if (drinksElement[i].value.length > 0) {
+                            localStorage["box" +shamt] = drinksElement[i].value;
+                            shamt++;
+                        }
+                    }
+                } else{
+                    alert("input some drinks!");
                 }
             } else {   // no native support for HTML5 storage :(
             }
         }
+        function clear() {
+            var drinksElement = document.getElementById("drinks");
+            for (var i = 0; i < drinksElement.length - 1; i++) {
+                drinksElement[i].value = "";
+            }
+        }
         var button = document.getElementById("btnsave");
         button.addEventListener("click", store);
+        button.addEventListener("click", clear);
     </script>
 
     <script src="../../Website/json/modernizr.js" ></script> 
