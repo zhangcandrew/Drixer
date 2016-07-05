@@ -140,7 +140,19 @@
         </p>
 
     </div> <!-- /container -->
+    <script src="../../Website/json/modernizr.js" ></script> 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
+        $(document).ready(function(){
+            localStorage.clear();
+        });
         var shamt = 0;
         var temp = 0;
         function store() {
@@ -170,15 +182,5 @@
         button.addEventListener("click", store);
         button.addEventListener("click", clear);
     </script>
-
-    <script src="../../Website/json/modernizr.js" ></script> 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">console.log("here");</script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
