@@ -67,15 +67,6 @@
           </div><!--/.container-fluid -->
       </nav>
       <div id="outputDiv">TODO write content</div>
-      <script>
-          var output = ' ';
-          for(var key in localStorage){
-              output = output + localStorage[key] + "  ";
-          }
-          document.write(output);
-      </script>
-
-
       <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js">
       </script>
       <script>
@@ -87,6 +78,14 @@
               storageBucket: "project-3833495122832284412.appspot.com",
           };
           firebase.initializeApp(config);
+      </script>
+      <script>
+          var output = ' ';
+          var myRef = new Firebase('https://project-3833495122832284412.firebaseio.com/');
+          for(var key in localStorage){
+              output = output + myRef.child('Alcohols').orderByChild('AlcoholName').equalTo(localStorage[key]) + "  ";
+          }
+          document.write(output);
       </script>
 
       <!-- Bootstrap core JavaScript
