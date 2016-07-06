@@ -70,20 +70,9 @@
       <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js">
       </script>
       <script>
-          // Initialize Firebase
-          var config = {
-              apiKey: "AIzaSyD0XWLarWw3afznv4REtn_-P97FY6u1T3c",
-              authDomain: "project-3833495122832284412.firebaseapp.com",
-              databaseURL: "https://project-3833495122832284412.firebaseio.com",
-              storageBucket: "project-3833495122832284412.appspot.com",
-          };
-          firebase.initializeApp(config);
-      </script>
-      <script>
           var output = ' ';
-          var myRef = new Firebase('https://project-3833495122832284412.firebaseio.com/');
           for(var key in localStorage){
-              output = output + myRef.child('Alcohols').orderByChild('AlcoholName').equalTo(localStorage[key]) + "  ";
+              output = output + localStorage[key] + "  ";
           }
           document.write(output);
       </script>
