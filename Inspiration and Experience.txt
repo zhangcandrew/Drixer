@@ -36,3 +36,4 @@ http://stackoverflow.com/questions/14659098/checking-if-a-textbox-is-empty-in-ja
 #On Databases
 http://smallbusiness.chron.com/attach-sql-database-49760.html
 http://dev.mysql.com/doc/refman/5.7/en/optimizing-database-structure.html
+https://www.youtube.com/watch?v=BmHLvUdkCA0&list=PL530D33D6E548481F&index=1
