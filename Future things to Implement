@@ -1,3 +1,4 @@
 Add the ability for users to add their own drinks. This may need the help of firebase. Maybe have two databases and the firebase one pushes to MYSQL at odd hours of the day?
 
 look into PHPADMIN instead for database usage
+- downloaded and configuring phpMyAdmin. Hopefully it works better. 
