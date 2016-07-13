@@ -1,6 +1,7 @@
 #help with recipes and mixed drinks
 https://natacseanc.wordpress.com/category/veganrecipeapp/
 http://www.1001cocktails.com/recipes/most-popular-mixed-drinks.html
+http://forum.kodi.tv/showthread.php?tid=235298&pid=2079513#pid2079513 -- very useful
 
 #On Javascript hoisting and nuances
 http://www.standardista.com/javascript/15-common-javascript-gotchas/
