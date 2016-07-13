@@ -3,3 +3,25 @@ Add the ability for users to add their own drinks. This may need the help of fir
 look into PHPADMIN instead for database usage
 - downloaded and configuring phpMyAdmin. Hopefully it works better. 
 - downloaded XAMPP which comes with PhPMyAdmin and also MySQL server. Much better package to install and also has Apache. This should do the trick for the database. 
+- code snippet to connect to mysql database for later use: 
+	<?php
+
+	/*** mysql hostname ***/
+	$hostname = 'localhost';
+
+	/*** mysql username ***/
+	$username = 'username';
+
+	/*** mysql password ***/
+	$password = 'password';
+
+	try {
+		$dbh = new PDO("mysql:host=$hostname;dbname=mysql", $username, $password);
+		/*** echo a message saying we have connected ***/
+		echo 'Connected to database';
+		}
+	catch(PDOException $e)
+		{
+		echo $e->getMessage();
+		}
+	?>
