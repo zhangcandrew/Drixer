@@ -41,3 +41,6 @@ http://dev.mysql.com/doc/refman/5.7/en/optimizing-database-structure.html
 https://www.youtube.com/watch?v=BmHLvUdkCA0&list=PL530D33D6E548481F&index=1
 https://www.siteground.com/tutorials/phpmyadmin/
 http://www.programmableweb.com/category/all/apis
+
+#getting a website up and running
+http://websitesetup.org/
