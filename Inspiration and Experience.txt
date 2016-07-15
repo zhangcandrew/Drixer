@@ -2,6 +2,7 @@
 https://natacseanc.wordpress.com/category/veganrecipeapp/
 http://www.1001cocktails.com/recipes/most-popular-mixed-drinks.html
 http://forum.kodi.tv/showthread.php?tid=235298&pid=2079513#pid2079513 -- very useful
+http://addb.absolutdrinks.com/docs/ ---- use this for sure
 
 #On Javascript hoisting and nuances
 http://www.standardista.com/javascript/15-common-javascript-gotchas/
@@ -39,3 +40,8 @@ http://smallbusiness.chron.com/attach-sql-database-49760.html
 http://dev.mysql.com/doc/refman/5.7/en/optimizing-database-structure.html
 https://www.youtube.com/watch?v=BmHLvUdkCA0&list=PL530D33D6E548481F&index=1
 https://www.siteground.com/tutorials/phpmyadmin/
+http://www.programmableweb.com/category/all/apis
+
+#getting a website up and running
+http://websitesetup.org/
+wordpress.com 
