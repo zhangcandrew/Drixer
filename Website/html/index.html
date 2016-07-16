@@ -137,7 +137,7 @@
             <div class="text-center">
                 <a class="btn btn-lg btn-primary mix-button" href="Results.html" role="button">Mix! &raquo;</a>
             </div>
-            </p>
+        </p>
 
     </div> <!-- /container -->
     <script src="../../Website/json/modernizr.js" ></script> 
@@ -150,37 +150,37 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-            localStorage.clear();
-        });
-        var shamt = 0;
-        var temp = 0;
-        function store() {
-            if (Modernizr.localstorage) {
-                // window.localStorage is available!
-                var drinksElement = document.getElementById("drinks");
-                if (drinksElement[0].value!="" || drinksElement[1].value != "" || drinksElement[2].value != "") {
-                    for (var i = 0; i < drinksElement.length - 1; i++) {
-                        if (drinksElement[i].value.length > 0) {
-                            localStorage["box" +shamt] = drinksElement[i].value;
-                            shamt++;
+            $(document).ready(function () {
+                localStorage.clear();
+            });
+            var shamt = 0;
+            var temp = 0;
+            function store() {
+                if (Modernizr.localstorage) {
+                    // window.localStorage is available!
+                    var drinksElement = document.getElementById("drinks");
+                    if (drinksElement[0].value != "" || drinksElement[1].value != "" || drinksElement[2].value != "") {
+                        for (var i = 0; i < drinksElement.length - 1; i++) {
+                            if (drinksElement[i].value.length > 0) {
+                                localStorage["box" + shamt] = drinksElement[i].value;
+                                shamt++;
+                            }
                         }
+                    } else {
+                        alert("input some drinks!");
                     }
-                } else{
-                    alert("input some drinks!");
+                } else {   // no native support for HTML5 storage :(
                 }
-            } else {   // no native support for HTML5 storage :(
             }
-        }
-        function clear() {
-            var drinksElement = document.getElementById("drinks");
-            for (var i = 0; i < drinksElement.length - 1; i++) {
-                drinksElement[i].value = "";
+            function clear() {
+                var drinksElement = document.getElementById("drinks");
+                for (var i = 0; i < drinksElement.length - 1; i++) {
+                    drinksElement[i].value = "";
+                }
             }
-        }
-        var button = document.getElementById("btnsave");
-        button.addEventListener("click", store);
-        button.addEventListener("click", clear);
+            var button = document.getElementById("btnsave");
+            button.addEventListener("click", store);
+            button.addEventListener("click", clear);
     </script>
 </body>
 </html>

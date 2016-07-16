@@ -27,6 +27,14 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <script src="http://assets.absolutdrinks.com/api/addb-0.5.2.js" type="text/javascript"></script>
+        <script>
+            addb.init({
+                appId: 9506,
+                developer: true
+            });
+            addb.ingredients().loadSet(function(query){console.log(query);});
+        </script>
     </head>
     <body>
         <div class="container">
