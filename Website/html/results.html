@@ -30,10 +30,9 @@
         <script src="http://assets.absolutdrinks.com/api/addb-0.5.2.js" type="text/javascript"></script>
         <script>
             addb.init({
-                appId: 9506,
-                developer: true
+                appId: 9506
             });
-            addb.ingredients().loadSet(function(query){console.log(query);});
+            addb.drinks().load('absolut cosmopolitan', function(shake){ });
         </script>
     </head>
     <body>
