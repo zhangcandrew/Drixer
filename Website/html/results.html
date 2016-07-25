@@ -32,7 +32,6 @@
             addb.init({
                 appId: 9506
             });
-            addb.drinks().load('absolut cosmopolitan', function(shake){ });
         </script>
     </head>
     <body>
@@ -81,7 +80,8 @@
                 for (var key in localStorage) {
                     output = output + localStorage[key] + "  ";
                 }
-                document.write(output);
+                var drink1 = JSON.parse(addb.drinks().load('Absolut Twister', function(shake){console.log('Success'); }));
+                document.write(drink1);
             </script>
 
             <!-- Bootstrap core JavaScript
