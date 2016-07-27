@@ -80,8 +80,8 @@
                 for (var key in localStorage) {
                     output = output + localStorage[key] + "  ";
                 }
-                var drink1 = addb.drinks().load('absolut-cosmopolitan', function(){});
-                document.write(typeof drink1);
+                var drink1 = addb.glasses().load('cocktail-glass', function(glass){});
+                document.write(drink1);
             </script>
 
             <!-- Bootstrap core JavaScript

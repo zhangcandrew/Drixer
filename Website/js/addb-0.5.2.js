@@ -18,7 +18,7 @@ host: 'addb.absolutdrinks.com',
 assetsHost: 'assets.absolutdrinks.com',
 queryExecuting: null,
 defaultPageSize: 25,
-developer: false
+developer: true
 };
 return {
 /**
