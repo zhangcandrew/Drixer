@@ -18,7 +18,7 @@ host: 'addb.absolutdrinks.com',
 assetsHost: 'assets.absolutdrinks.com',
 queryExecuting: null,
 defaultPageSize: 25,
-developer: true
+developer: false
 };
 return {
 /**
@@ -387,6 +387,7 @@ script.type = "text/javascript";
 script.async = true;
 script.src = encodeURI(queryBuilder.url());
 // append it to the head since old versions of IE likes this the most.
+console.log(script)
 document.getElementsByTagName('head')[0].appendChild(script);
 }
 };

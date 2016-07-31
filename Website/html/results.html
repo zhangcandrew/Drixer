@@ -29,7 +29,7 @@
         <![endif]-->
         <script src="../js/addb-0.5.2.js" type="text/javascript"></script>
         <script>
-            addb.init({
+            addb.init({                
                 appId: 9506
             });
         </script>
@@ -81,7 +81,7 @@
                     output = output + localStorage[key] + "  ";
                 }
                 var drink1 = addb.glasses().load('cocktail-glass', function(glass){});
-                document.write(drink1);
+                document.write(typeof drink1);
             </script>
 
             <!-- Bootstrap core JavaScript
