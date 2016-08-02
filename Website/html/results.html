@@ -72,7 +72,7 @@
                     </div><!--/.nav-collapse -->
                 </div><!--/.container-fluid -->
             </nav>
-            <div id="outputDiv">TODO write content</div>
+            <div id="outputDiv"></div>
             <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js">
             </script>
             <script>
@@ -80,7 +80,12 @@
                 for (var key in localStorage) {
                     output = output + localStorage[key] + "  ";
                 }
-                document.write(addb.tastes().load('sweet', function(shake){return shake['description']}));
+                addb.tastes().load('sweet', function myCallBack(shake){
+                    var container = document.getElementById('outputDiv');
+                    var content = document.createElement("span");
+                    content.innerHTML = shake['description'];
+                    container.appendChild(content);
+                });
             </script>
 
             <!-- Bootstrap core JavaScript
@@ -95,6 +100,7 @@
             <!--Problem with this area. Need a check for when the browser is IE 10, otherewise don't use.
             <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
             -->
+        </div>
     </body>
 </html>
 
