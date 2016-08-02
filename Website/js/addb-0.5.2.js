@@ -383,11 +383,10 @@ delete window[callbackName];
 };
 var script = document.createElement('script');
 script.id = name;
-script.type = "text/javascript";
+script.type = "application/javascript";
 script.async = true;
 script.src = encodeURI(queryBuilder.url());
 // append it to the head since old versions of IE likes this the most.
-console.log(script)
 document.getElementsByTagName('head')[0].appendChild(script);
 }
 };
