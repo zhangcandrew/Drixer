@@ -1,17 +1,29 @@
 body {
-  padding-top: 20px;
-  padding-bottom: 10px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background:black;
 }
 
-.navbar {
-  margin-bottom: 20px;
+.navbar-default{
+    color:#ffffff;
+    border-color:aqua;
+    margin-bottom: 1%;
+    background-color: #e4b9b9;
+}
+
+.jumbotron{
+    padding-top: 0;
+    color:white;
+    background:#000;
 }
 
 .input-group,
 .input-group-lg {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .mix-button {
-
+    background:#e4b9b9;
+    color:white;
+    border-color:aqua;
 }
