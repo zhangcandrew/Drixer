@@ -5,15 +5,14 @@ body {
 }
 
 .navbar-default{
-    color:#ffffff;
-    border-color:aqua;
     margin-bottom: 1%;
     background-color: #e4b9b9;
+    border-color: #e4b9b9;
 }
 
 .jumbotron{
     padding-top: 0;
-    color:white;
+    color:#e4b9b9;
     background:#000;
 }
 
@@ -22,8 +21,12 @@ body {
     margin-bottom: 5px;
 }
 
+.container div{
+    color: white;
+}
+
 .mix-button {
     background:#e4b9b9;
-    color:white;
-    border-color:aqua;
+    color:#777;
+    border-color: #e4b9b9;
 }
